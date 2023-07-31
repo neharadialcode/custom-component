@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dataCard {
+  border: 1px solid blue;
+}
+table,
+th,
+td {
+  border: 1px solid black !important;
+  border-collapse: collapse;
+  text-align: start;
+  padding-left: 10px;
+}
+.small_images {
+  width: 100%;
+  max-width: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.numberBtn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.active {
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+}
+.prev_btn,
+.next_btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  margin: 0 48px;
+}
+.prev_btn[disabled],
+.next_btn[disabled] {
+  opacity: 0.5;
+}
+.search_div input {
+  border: 1px solid blue;
+  width: 100%;
+  padding: 0 10px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.header_btn li {
+  background-color: rgb(172, 8, 22);
+  color: white;
+  padding: 5px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.product_img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.price {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(7, 190, 17);
+}
+.sidebar {
+  background-color: pink;
+  height: 100vh;
+  width: 400px;
+  padding: 20px;
+}
+.max_width {
+  max-width: 1320px;
+}
+.cart_img {
+  max-width: 200px;
+}
+.quantity_div span {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px;
+}
