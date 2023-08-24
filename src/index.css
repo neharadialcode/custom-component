@@ -70,3 +70,20 @@ code {
   font-size: 20px;
   font-weight: 700;
 }
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: blue !important;
+}

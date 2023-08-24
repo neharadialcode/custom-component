@@ -19,26 +19,29 @@ import InfiniteScrollComponent from "./components/InfiniteScroll";
 import DateFilter from "./components/DateFilter";
 import CartFunction from "./components/CartFunction";
 import Component1 from "./components/fordifferenciate-between-custom-hook/Component1";
+import SignUpForm from "./components/authentication/SignUpForm";
+import LoginForm from "./components/authentication/LoginForm";
+import MainPage from "./components/authentication/MainPage";
+import TextEditor from "./components/TextEditor";
+import TernaryConditions from "./components/TernaryConditions";
 function App() {
   const [id, setId] = useState(0);
   console.log(id);
   return (
     <div className="App">
-      {/* <a
-        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-          "Ooops! I pressed the RED button! I wonder what will happen now? :flushed: #stitchlist"
-        )}&url=${encodeURIComponent("\nhttps://stitched-stories.com/")}`}
-      >
-        Tweet
-      </a> */}
-
       {/* <Tabs /> */}
       {/* <CustomSelect /> */}
       {/* <Game /> */}
       <BrowserRouter>
-        {/* <CommonHeader /> */}
-        <Routes>
+        <CommonHeader />
+        <TernaryConditions />
+        {/* <Routes>
           <Route>
+            <Route path="/sign-up" element={<SignUpForm />} />
+            <Route path="/text-editor" element={<TextEditor />} />
+            <Route path="/sign-up" e lement={<SignUpForm />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/main-page" element={<MainPage />} />
             <Route path="/pagination" element={<CustomPagination />} />
             <Route path="/date-filter" element={<DateFilter />} />
             <Route path="/search" element={<SearchWithSelect />} />
@@ -59,7 +62,7 @@ function App() {
             />
             <Route path={`/second-page/:id`} element={<SecondPage />} />
           </Route>
-        </Routes>
+        </Routes> */}
       </BrowserRouter>
     </div>
   );

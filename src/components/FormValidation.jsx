@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const FormValidation = () => {
+  emailjs.init("J3uvhB4IQRdDZZgLU");
   const initialValue = {
     name: "",
     email: "",
@@ -8,6 +10,7 @@ const FormValidation = () => {
     password: "",
     confPassword: "",
   };
+  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const [valueData, setValuedata] = useState(initialValue);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
@@ -20,10 +23,22 @@ const FormValidation = () => {
       valueData.checkbox &&
       valueData.confPassword &&
       valueData.password &&
+      emailRegex.test(valueData.email) &&
       valueData.confPassword === valueData.password
     ) {
-      setValuedata(initialValue);
-      console.log(valueData, "valueData");
+      emailjs
+        .send("service_tnzowe6", "template_5cgnjma", {
+          name: valueData.name,
+          message: valueData.email,
+        })
+        .then((res) => {
+          console.log(res);
+          setError(false);
+          setValuedata(initialValue);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
 
@@ -87,6 +102,7 @@ const FormValidation = () => {
                 id=""
                 checked={valueData.checkbox}
               />
+
               <button>Submit</button>
             </form>
           </div>
